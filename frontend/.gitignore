@@ -1,0 +1,18 @@
+# Aqua Task Manager Frontend Directory .gitignore
+
+# Ignore Node.js modules
+node_modules/
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+*.sublime-*
+*.swo
+*.swp
+
+# Ignore logs and cache
+*.log
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,34 @@
+# Aqua Task Manager Root Directory .gitignore
+
+# Ignore system and environment files
+__pycache__/
+*.pyc
+*.pyo
+*.env
+
+# Ignore virtual environment
+backend/.venv
+frontend/node_modules
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+*.sublime-*
+*.swo
+*.swp
+
+# Ignore logs and cache
+*.log
+__pycache__/
+
+# Ignore sensitive information
+.env
+.env.local
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore Pipenv files
+Pipfile
+Pipfile.lock

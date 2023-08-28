@@ -1,0 +1,26 @@
+# Aqua Task Manager Backend Directory .gitignore
+
+# Ignore Pipenv virtual environment
+.venv/
+Pipfile.lock
+
+# Ignore system and environment files
+__pycache__/
+*.pyc
+*.pyo
+*.env
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+*.sublime-*
+*.swo
+*.swp
+
+# Ignore logs and cache
+*.log
+__pycache__/
+
+# Ignore sensitive information
+.env
+.env.local
