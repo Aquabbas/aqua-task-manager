@@ -13,10 +13,14 @@ from database import (
 )
 
 # an HTTP-specific exception class  to generate exception information
-
+# import os
 from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
+
+# For Render Deployed (React) App to Connect w/ Render Deployed (FastAPI) App
+# import os
+# origins =  https://yourfrontendapp1.com,https://yourfrontendapp2.com
 origins = [
     "http://localhost:3000",
 ]
@@ -28,6 +32,8 @@ origins = [
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
+    # For Render Deployed React App
+    # allow_origins=os.environ.get("origins").split(","),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
