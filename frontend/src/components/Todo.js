@@ -5,7 +5,6 @@ function TodoItem(props) {
     const deleteTodoHandler = (title) => {
     axios.delete(`${process.env.REACT_APP_API_URL}/api/todo/${title}`)
         .then(res => console.log(res.data)) }
-  
     return (
         <div>
             <p>
@@ -16,5 +15,4 @@ function TodoItem(props) {
         </div>
     )
 }
-
 export default TodoItem;

@@ -1,56 +1,74 @@
-# FARM Stack Project (Aqua Task Manager)
+# Aqua Task Manager - FARM Stack Project
 
-A CRUD To-Do Application built using the FARM Stack (FastAPI, React, MongoDB).
+A Full Stack CRUD To-Do Application built using the FARM Stack (FastAPI, React, MongoDB).
 
 ## Project Overview
 
-This project is a Full Stack CRUD application that manages tasks using the FastAPI framework for the backend, React for the frontend, and MongoDB for the database. The Aqua Task Manager allows users to create, read, update, and delete tasks in a user-friendly interface.
+The Aqua Task Manager is a Full Stack CRUD application that simplifies task management. It leverages the FastAPI framework for the backend, React for the frontend, and MongoDB for the database. With this application, users can efficiently create, read, update, and delete tasks in an intuitive user interface.
 
-## Technical Requirements for Each Framework
+## Technical Requirements
 
-### FastAPI
-- [x] Install Python
+### Backend (FastAPI)
 
-### React
-- [x] Install Node.js
-- [x] Install npm
+- Python Installation: Ensure that Python is installed on your system.
 
-### MongoDB
-- [x] Create a Free Account on MongoDB Atlas
-- [x] Deploy a Free DB Cluster in a Region Near You and Cloud Service Provider of your choice
+### Frontend (React)
+
+- Node.js and npm Installation: Make sure Node.js and npm are installed on your system.
+
+### Database (MongoDB)
+
+- MongoDB Atlas Account: Create a free account on MongoDB Atlas.
+- Database Cluster Deployment: Deploy a free DB cluster in a region of your choice and with your preferred cloud service provider.
 
 ## MongoDB Server Setup
 
-### Download/Install the MongoDB Community Server
-- [x] Download and install the MongoDB Community Server ("mongod") based on your platform: [Download Link](https://www.mongodb.com/try/download/community)
+### Installing MongoDB Community Server
 
-### Get MongoDB Atlas CLI on your Terminal
-- [x] Install MongoDB Atlas CLI: [Download Link](https://www.mongodb.com/try/download/community)
+1. Download and install MongoDB Community Server ("mongod") for your platform: [Download Link](https://www.mongodb.com/try/download/community).
 
-### Download/Install MongoDB Developer Tools
-- [x] MongoDB Shell (CLI): [Download Link](https://www.mongodb.com/developer-tools)
-- [x] MongoDB Compass (GUI): [Download Link](https://www.mongodb.com/developer-tools)
+### MongoDB Atlas CLI
 
-### Set up the MongoDB Server in the Terminal (For Macbook)
+1. Install the MongoDB Atlas CLI: [Download Link](https://www.mongodb.com/try/download/community).
 
-1. If You Have Not Yet Created/Downloaded the MongoDB Community Server and Created a Separate MongoDB Server File Path
-    1. Create a Folder (in the place of your choosing) in Your Home Directory "mongodb" and put in it the MongoDB Community Server.
-    2. Add to PATH in your shell Configuration file (such as ~/.zshrc for the Zsh shell):
-        1. Open terminal: `nano ~/.zshrc` to open the file.
-        2. Add `export PATH="$PATH:$HOME/mongodb/mongodb-macos-aarch64-7.0.0/bin"` to ~/.zshrc file.
-        3. Run `source ~/.zshrc` to activate changes in the file.
-    3. Create a "mongodb-data" folder (in the place of your choosing) in your home directory.
-    4. Start the MongoDB Server with: `mongod --dbpath ~/mongodb-data`.
+### MongoDB Developer Tools
 
-2. Run the MongoDB Server and Shell
-    - Start the Server: `mongod --dbpath ~/mongodb-data`.
-    - Start the Shell: `mongosh`.
+1. Download and install MongoDB Shell (CLI): [Download Link](https://www.mongodb.com/developer-tools).
+2. Download and install MongoDB Compass (GUI): [Download Link](https://www.mongodb.com/developer-tools).
 
-Note: If you're using a different operating system, make sure to download and install the appropriate MongoDB Community Server version for your system. Adjust the PATH and setup instructions accordingly.
+### Set up the MongoDB Server (For Macbook)
 
-## Running the MongoDB Server on your machine
+#### If MongoDB Community Server Is Not Yet Installed
 
-1. Start the MongoDB Server: `mongod --dbpath ~/mongodb-data`
-2. Start the Backend and Frontend Servers (refer to your project's documentation)
-3. Interact with the Aqua Task Manager by accessing the provided URLs.
+1. Create a folder named "mongodb" in your home directory.
+2. Place the downloaded MongoDB Community Server in this folder.
+3. Add MongoDB to your PATH by editing your shell configuration file (e.g., ~/.zshrc):
 
+   ```shell
+   nano ~/.zshrc
+
+Add the following line to the file:
+
+export PATH="$PATH:$HOME/mongodb/mongodb-macos-aarch64-7.0.0/bin"
+
+Save the file and run:
+
+source ~/.zshrc
+
+Add the following line to the file:
+export PATH="$PATH:$HOME/mongodb/mongodb-macos-aarch64-7.0.0/bin"
+
+Save the file and run:
+source ~/.zshrc
+
+Create a "mongodb-data" folder in your home directory.
+Start the MongoDB Server using:
+mongod --dbpath ~/mongodb-data
+
+Running the MongoDB Server
+Start the MongoDB Server:
+mongod --dbpath ~/mongodb-data
+
+Start the Backend and Frontend Servers (refer to your project's documentation).
+
+Interact with the Aqua Task Manager by accessing the provided URLs.

@@ -1,3 +1,75 @@
+
+### Frontend Directory README.md
+
+```markdown
+# Aqua Task Manager - Frontend
+
+The frontend of the Aqua Task Manager, a Full Stack CRUD To-Do Application built using the FARM Stack (FastAPI, React, MongoDB).
+
+## Project Overview
+
+This is the frontend component of the Aqua Task Manager, a Full Stack CRUD application. It provides an interactive user interface for managing tasks.
+
+## Prerequisites
+
+- Node.js and npm Installation: Make sure Node.js and npm are installed on your system.
+
+## Getting Started
+
+1. Clone this repository to your local machine.
+
+   ```shell
+   git clone <repository-url>
+
+
+Navigate to the frontend directory:
+cd frontend
+
+Install project dependencies using npm:
+npm install
+
+Create a .env file in the frontend directory and configure environment variables (e.g., FastAPI URL).
+Start the React development server:
+npm start
+
+The React development server is now running locally. You can access it at:
+http://localhost:3000
+
+You can now interact with the Aqua Task Manager's user interface and perform CRUD operations on tasks.
+
+Environment Variables
+Make sure to set up the following environment variables in your .env file:
+
+REACT_APP_API_URL: The URL of the FastAPI backend server.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

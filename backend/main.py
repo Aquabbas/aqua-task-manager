@@ -1,9 +1,6 @@
-
-
 from fastapi import FastAPI, HTTPException
-
 from model import Todo
-
+from decouple import config
 from database import (
     fetch_one_todo,
     fetch_all_todos,
@@ -11,28 +8,23 @@ from database import (
     update_todo,
     remove_todo,
 )
-
-# an HTTP-specific exception class  to generate exception information
-# import os
 from fastapi.middleware.cors import CORSMiddleware
+
 app = FastAPI()
 
-
-# For Render Deployed (React) App to Connect w/ Render Deployed (FastAPI) App
+# Possible Soltuion For Render Deployed (React) App to Connect w/ Render Deployed (FastAPI) App
 # import os
 # origins =  https://yourfrontendapp1.com,https://yourfrontendapp2.com
+REACT_URL = config('REACT_URL')
 origins = [
-    "http://localhost:3000",
+    REACT_URL,
 ]
 
-
-# what is a middleware? 
-# software that acts as a bridge between an operating system or database and applications, especially on a network.
-
+# Middleware is software that acts as a bridge between an operating system or database and applications, especially on a network.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
-    # For Render Deployed React App
+    # Possible Solution For Render Deployed React App
     # allow_origins=os.environ.get("origins").split(","),
     allow_credentials=True,
     allow_methods=["*"],
@@ -45,6 +37,7 @@ async def read_root():
 
 @app.get("/api/todo")
 async def get_todo():
+    print("Received GET request at /api/todo")  # Add this line for debugging
     response = await fetch_all_todos()
     return response
 

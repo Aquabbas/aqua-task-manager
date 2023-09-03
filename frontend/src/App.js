@@ -6,17 +6,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
-
   const [todoList, setTodoList] = useState([{}])
   const [title, setTitle] = useState('') 
   const [desc, setDesc] = useState('')
-  
-    
 
   // Read all todos
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_URL}/api/todo`)
-    // axios.get('${process.env.REACT_APP_API_URL}/api/todo')
       .then(res => {
         setTodoList(res.data)
       })
@@ -48,5 +44,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
