@@ -1,8 +1,10 @@
+import os
 import motor.motor_asyncio
 from model import Todo
-from decouple import config
+# from decouple import config
 
-uri = config('uri')
+# uri = config('uri')
+uri = os.environ.get('uri')
 client = motor.motor_asyncio.AsyncIOMotorClient(uri)
 database = client.TodoList
 collection = database.todo

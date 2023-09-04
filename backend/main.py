@@ -1,6 +1,7 @@
+import os
 from fastapi import FastAPI, HTTPException
 from model import Todo
-from decouple import config
+# from decouple import config
 from database import (
     fetch_one_todo,
     fetch_all_todos,
@@ -14,8 +15,9 @@ app = FastAPI()
 
 # Possible Soltuion For Render Deployed (React) App to Connect w/ Render Deployed (FastAPI) App
 # import os
-# origins =  https://yourfrontendapp1.com,https://yourfrontendapp2.com
-REACT_URL = config('REACT_URL')
+# origins =  REACT_URL,https://yourfrontendapp2.com
+# REACT_URL = config('REACT_URL')
+REACT_URL = os.environ.get('REACT_URL')
 origins = [
     REACT_URL,
 ]
@@ -25,7 +27,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     # Possible Solution For Render Deployed React App
-    # allow_origins=os.environ.get("origins").split(","),
+    #allow_origins=os.environ.get("uri").split(","),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
